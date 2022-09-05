@@ -1,8 +1,8 @@
-package com.example.message;
+package com.example.itemservice;
 
-import com.example.message.domain.item.Item;
-import com.example.message.domain.item.ItemRepository;
-import com.example.message.domain.item.ItemType;
+import com.example.itemservice.domain.item.Item;
+import com.example.itemservice.domain.item.ItemRepository;
+import com.example.itemservice.domain.item.ItemType;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Component;
 

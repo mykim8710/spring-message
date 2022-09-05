@@ -1,9 +1,9 @@
-package com.example.message.web.form;
+package com.example.itemservice.web.form;
 
-import com.example.message.domain.item.DeliveryCode;
-import com.example.message.domain.item.Item;
-import com.example.message.domain.item.ItemRepository;
-import com.example.message.domain.item.ItemType;
+import com.example.itemservice.domain.item.DeliveryCode;
+import com.example.itemservice.domain.item.Item;
+import com.example.itemservice.domain.item.ItemRepository;
+import com.example.itemservice.domain.item.ItemType;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
