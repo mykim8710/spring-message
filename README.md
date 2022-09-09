@@ -1,4 +1,4 @@
-# Spring - Thymeleaf - form Study Project
+# Spring - message, 국제화 Study Project
 
 ## Project Spec
 - 프로젝트 선택
