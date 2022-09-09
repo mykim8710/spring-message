@@ -21,8 +21,8 @@ public class TestDataInit {
      */
     @PostConstruct
     public void init() {
-        itemRepository.save(new Item("itemA", 10000, 10, true, new ArrayList<String>(Arrays.asList("SEOUL")), ItemType.BOOK, "FAST"));
-        itemRepository.save(new Item("itemB", 20000, 20, true, new ArrayList<String>(Arrays.asList("BUSAN")), ItemType.BOOK, "FAST"));
+        itemRepository.save(new Item("itemA", 10000, 10));
+        itemRepository.save(new Item("itemB", 20000,3));
     }
 
 }

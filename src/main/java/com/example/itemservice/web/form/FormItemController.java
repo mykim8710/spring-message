@@ -20,7 +20,7 @@ import java.util.*;
 public class FormItemController {
     private final ItemRepository itemRepository;
 
-    @ModelAttribute("regions")
+    //@ModelAttribute("regions")
     public Map<String, String> regions() {
         Map<String, String> regions = new LinkedHashMap<>();    // 순서보장
         regions.put("SEOUL", "서울");
@@ -29,12 +29,12 @@ public class FormItemController {
         return regions;
     }
 
-    @ModelAttribute("itemTypes")
+    //@ModelAttribute("itemTypes")
     public ItemType[] itemTypes() {
         return ItemType.values();
     }
 
-    @ModelAttribute("deliveryCodes")
+    //@ModelAttribute("deliveryCodes")
     public List<DeliveryCode> deliveryCodes() {
         List<DeliveryCode> deliveryCodes = new ArrayList<>();
         deliveryCodes.add(new DeliveryCode("FAST", "빠른 배송"));
@@ -45,7 +45,9 @@ public class FormItemController {
 
     // view
     @GetMapping
-    public String items(Model model) {
+    public String items(Model model, Locale locale) {
+        log.info("locale={}", locale);
+
         List<Item> items = itemRepository.findAll();
         model.addAttribute("items", items);
         return "form/items";
@@ -63,7 +65,6 @@ public class FormItemController {
     @GetMapping("/add")
     public String addForm(Model model) {
         model.addAttribute("item", new Item());
-
         return "form/addForm";
     }
 
